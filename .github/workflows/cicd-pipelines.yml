@@ -13,13 +13,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4 #Checkout ke repository yang digunakan
       - name: SSH Connect
-        uses: appleboy/scp-action@v1 #Digunakan untuk konek ke server melaui SSH
+        uses: appleboy/ssh-action@v1.0.0
         with:
           host: ${{ secrets.SERVER_HOST }}
           username: ${{ secrets.SERVER_USER }}
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             echo "Berhasil konek ke server"
+
 
 
 
