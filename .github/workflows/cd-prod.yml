@@ -21,12 +21,14 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             echo "Berhasil terkoneksi dengan server"
-            if [-d "/home/cicd"]; then
-                echo "Ada folder cicd"
-                cd /home/cicd
+            if [ -d "/home/cicd" ]; then
+              echo "Ada folder cicd"
+              cd /home/cicd
             else
-                echo "Tidak ada folder cicd, membuat folder cicd"
-                mkdir /home/cicd
+              echo "Tidak ada folder cicd, membuat folder cicd"
+              mkdir /home/cicd
+              cd /home/cicd
             fi
+
             
             
