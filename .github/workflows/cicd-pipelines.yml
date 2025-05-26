@@ -1,4 +1,4 @@
-name: CICD Database Dev to Prod  
+name: CICD Database Dev to Prod
 
 on:
   push:
@@ -21,7 +21,8 @@ jobs:
           script: |
             echo "Berhasil konek ke server"
 
+            cd /home/cicd
+            echo "Berhasil masuk ke folder cicd"
 
-
-
- 
+            sudo docker compose up -d  #Menjalankan docker compose di server
+            echo "Berhasil menjalankan docker compose"

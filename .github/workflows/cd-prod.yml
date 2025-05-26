@@ -29,6 +29,3 @@ jobs:
               mkdir /home/cicd
               cd /home/cicd
             fi
-
-            
-            
